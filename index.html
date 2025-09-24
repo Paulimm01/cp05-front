@@ -6,38 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://kit.fontawesome.com/43901c4062.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/ab2fa2593c.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&displ… rel="
-        stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
     <title>Melodia</title>
 </head>
 
 <body class="bg-neutral-800">
-    <header class="w-full flex h-30 bg-neutral-700 items-center justify-between relative">
-        <div class="flex justify-center items-center sm:w-1/3">
-            <i class="fa-solid fa-music animate-ping m-5 text-white text-5xl py-8"></i>
-            <h1 class="text-center sm:text-5xl text-2xl text-gray-100 font-bold font-[Playfair]">Melodia</h1>
+    <header class="w-full bg-neutral-700 text-white">
+        <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+            <div class="flex items-center sm:w-1/3">
+                <i class="fa-solid fa-music animate-ping text-white text-4xl mr-3"></i>
+                <h1 class="text-2xl sm:text-4xl font-bold font-[Playfair]">Melodia</h1>
+            </div>
+
+            <nav class="hidden md:flex gap-5">
+                <a href="#"
+                    class="px-4 py-2 bg-neutral-800 text-lg text-gray-100 rounded hover:bg-black transition">Login</a>
+                <a href="#"
+                    class="px-4 py-2 bg-neutral-800 text-lg text-gray-100 rounded hover:bg-black transition">Saiba
+                    Mais</a>
+            </nav>
+
+            <button id="menu-btn" class="md:hidden text-3xl">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
-        <div class="text-white w-1/3 text-center sm:flex justify-center items-center gap-5">
+
+        <nav id="mobile-menu" class="hidden flex-col bg-neutral-800 px-6 pb-4 space-y-2">
             <a href="#"
-                class="px-4 py-2 bg-gray-500 text-xl text-gray-100 rounded border-2 border-transparent hover:bg-gray-600 hover:border-gray-200/75 transition duration-200">Login</a>
+                class="block px-4 py-2 bg-neutral-600 text-lg text-white rounded hover:bg-neutral-600 transition">Login</a>
             <a href="#"
-                class="px-4 py-2 bg-gray-500 text-xl text-gray-100 rounded border-2 border-transparent hover:bg-gray-600 hover:border-gray-200/75 transition duration-200">Saiba
+                class="block px-4 py-2 bg-neutral-600 text-lg text-white rounded hover:bg-neutral-600 transition">Saiba
                 Mais</a>
-        </div>
+        </nav>
     </header>
-    </div>
-    </header>
-    <section class="h-auto flex flex-col justify-center items-center text-center text-white py-50">
+
+    <section class="h-auto flex flex-col justify-center items-center text-center text-white py-20 px-6">
         <h1 class="text-4xl md:text-6xl font-bold mb-4 font-['Playfair']">Melodia: Sua Música, Sua Forma</h1>
         <p class="text-lg md:text-xl text-white mb-6">Descubra novos artistas, crie playlists e curta músicas em alta
             qualidade.</p>
         <a href="#funcionalidades"
-            class="bg-black text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-gray-700 transition">
+            class="bg-black text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-neutral-600 transition">
             Ouvir Agora
         </a>
     </section>
+
     <section id="funcionalidades" class="py-20 bg-neutral-700 text-white px-6">
         <div class="max-w-6xl mx-auto text-center mb-12">
             <h2 class="text-3xl md:text-5xl font-bold font-['Playfair']">Funcionalidades do Melodia</h2>
@@ -56,6 +73,7 @@
                 <h3 class="text-xl font-semibold mb-2">Playlists Personalizadas</h3>
                 <p class="text-white">Monte playlists únicas de acordo com o seu gosto musical e momento.</p>
             </div>
+
             <div class="bg-neutral-900 p-8 rounded-lg shadow-lg hover:shadow-xl transition">
                 <i class="fas fa-user-plus animate-bounce text-white text-4xl mb-4"></i>
                 <h3 class="text-xl font-semibold mb-2">Descoberta de Novos Artistas</h3>
@@ -64,10 +82,87 @@
         </div>
     </section>
 
-    <section class="py-10 text-center bg-neutral-900 text-gray-500">
+    <section
+        class="h-auto bg-neutral-800 flex justify-center items-center text-center text-white py-10 gap-3 flex-col">
+        <p class="text-5xl font-bold font-['Playfair']">Agora fique com o show</p>
+        <p id="texto" class="text-2xl">3 am West End</p>
+        <img src="src/assets/imgs/musica-eletronica.jpg" alt="logo eletronica"
+            class="object-cover h-60 w-96 rounded-lg shadow-lg">
+        <div class="flex justify-center items-center gap-3">
+            <button id="antes"><i
+                    class="fa-regular fa-square-caret-right text-3xl rotate-180 cursor-pointer"></i></button>
+            <audio id="player" src="src/assets/audio/3 am West End.mp3" controls></audio>
+            <button id="depois"><i class="fa-regular fa-square-caret-right text-3xl cursor-pointer"></i></button>
+        </div>
     </section>
-    <script src="script.js"></script>
+    <section class="bg-neutral-600">
+    <body class="bg-neutral-600 p-6 font-sans">
+ 
+  <h2 class="text-center text-5xl font-bold mb-6 text-white font-[Playfair] py-10">Relatos de Usuários</h2>
+ 
+  <div id="vitrine" class="py-5 grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+ 
+  </div>
+</section>
 
+<body class="bg-gray-100">
+ 
+  <section class="min-h-screen flex items-center justify-center bg-neutral-800 py-10 px-4">
+    <div class="w-full max-w-md md:max-w-lg lg:max-w-xl bg-neutral-600 p-6 md:p-10 rounded-lg shadow-md">
+      <h2 class="text-2xl md:text-4xl font-bold text-white mb-4 text-center font-[Playfair]">Formulário de Contato</h2>
+      <p class="text-white mb-6 text-center">Preencha os campos abaixo para entrar em contato com a gente!</p>
+ 
+      <form id="contatoForm" class="space-y-4">
+        <div>
+          <label for="nome" class="flex items-center gap-2 text-white font-medium">
+            <i class="fa-solid fa-child"></i> Nome
+          </label>
+          <input type="text" id="nome" name="nome" placeholder="Digite seu nome"
+            class="bg-neutral-800 text-white w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-white">
+        </div>
+ 
+        <div>
+          <label for="email" class="flex items-center gap-2 text-white font-medium">
+            <i class="fa-solid fa-envelope"></i> E-mail
+          </label>
+          <input type="email" id="email" name="email" placeholder="Digite seu e-mail"
+            class="bg-neutral-800 text-white w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-white">
+        </div>
+ 
+        <div>
+          <label for="mensagem" class="flex items-center gap-2 text-white font-medium">
+            <i class="fa-solid fa-comment-dots"></i> Mensagem
+          </label>
+          <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva sua mensagem"
+            class="bg-neutral-800 text-white w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-white"></textarea>
+        </div>
+ 
+        <button type="submit"
+          class="bg-neutral-800 text-white w-full text-white font-semibold py-2 px-4 rounded-lg hover:bg-black cursor-pointer transition text-lg md:text-xl">
+          Enviar
+        </button>
+      </form>
+    </div>
+  </section>
+
+    <footer class="py-8 bg-neutral-900 text-center w-full text-gray-400">
+        <div class="flex justify-center space-x-6 mb-4">
+            <a href="https://instagram.com" target="_blank" class="hover:text-white transition">
+                <i class="fab fa-instagram text-4xl"></i>
+            </a>
+            <a href="https://facebook.com" target="_blank" class="hover:text-white transition">
+                <i class="fab fa-facebook text-4xl"></i>
+            </a>
+            <a href="https://github.com/Paulimm01/cp05-front.git" target="_blank" class="hover:text-white transition">
+                <i class="fab fa-github  text-4xl"></i>
+            </a>
+        </div>
+        <p class="text-sm">&copy; 2025 Melodia. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="src/js/script.js"></script>
+    <script src="src/js/app.js"></script>
+    <script src="src/js/vitrine.js"></script>
 </body>
 
 </html>
